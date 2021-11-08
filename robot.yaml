@@ -1,0 +1,14 @@
+tasks:
+  Upload Data:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" UploadRecords.robot
+  Process Data:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" FillFormData.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
